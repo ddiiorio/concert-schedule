@@ -18,13 +18,35 @@
     </ion-list-header>
 
     <ion-item>
+      <ion-label floating>Artist</ion-label>
+      <ion-input [(ngModel)]="newEventArtist"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Date</ion-label>
+      <ion-input [(ngModel)]="newEventDate"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Venue</ion-label>
+      <ion-input [(ngModel)]="newEventVenue"></ion-input>
+    </ion-item>
+    <button (click)="btnAddClicked(newEventArtist, newEventDate, newEventVenue)" ion-button>Add</button>
+
+    <ion-item-sliding *ngFor="let event of events; let i = index">
+    <ion-item >
       <ion-thumbnail item-start>
         <img src="../../assets/img/tool.jpg">
       </ion-thumbnail>
-      <h2>Tool</h2>
-      <h3>Thursday June 15th</h3>
-      <p>Rogers Arena</p>
+      <h2>{{event.artist}}</h2>
+      <h3>{{event.date}}</h3>
+      <p>{{event.venue}}</p>
     </ion-item>
+    <ion-item-options>
+      <button ion-button color="danger" icon-start (click)="del(i)">
+        <ion-icon name='close'></ion-icon>
+        Remove
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
 
     <ion-list-header>
       August
