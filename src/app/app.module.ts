@@ -11,6 +11,18 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+let config = {
+  apiKey: "AIzaSyBDVeiP0baue1RbuNNxunfGjSu7RLLam4Q",
+  authDomain: "concertapp-6ef13.firebaseapp.com",
+  databaseURL: "https://concertapp-6ef13.firebaseio.com",
+  projectId: "concertapp-6ef13",
+  storageBucket: "concertapp-6ef13.appspot.com",
+  messagingSenderId: "1010617522411"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -21,7 +33,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
