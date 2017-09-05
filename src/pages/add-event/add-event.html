@@ -1,0 +1,32 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add Event
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">
+        <ion-icon name="md-close"> Cancel</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Artist</ion-label>
+    <ion-input [(ngModel)]="newEventArtist"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Date</ion-label>
+    <ion-input [(ngModel)]="newEventDate"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Venue</ion-label>
+    <ion-input [(ngModel)]="newEventVenue"></ion-input>
+  </ion-item>
+  <button (click)="btnAddClicked(newEventArtist, newEventDate, newEventVenue); closeModal()" ion-button>Add</button>
+
+</ion-content>
