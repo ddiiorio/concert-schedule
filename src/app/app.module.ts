@@ -7,6 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ConcertsPage } from '../pages/concerts/concerts';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AddEventPage } from "../pages/add-event/add-event";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,7 +30,8 @@ let config = {
     AboutPage,
     ConcertsPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AddEventPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ let config = {
     AboutPage,
     ConcertsPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AddEventPage
   ],
   providers: [
     StatusBar,
