@@ -1,1 +1,3 @@
-Creating an Android app to track upcoming concerts
+Mobile web app to track upcoming concerts
+
+Currently on hold
